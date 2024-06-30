@@ -3,15 +3,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Inventary.backend.Model.Entity;
 
-[Table("BrandName")]
-public class BrandName
+[Table("Supplier")]
+public class Supplier
 {
-    [Required]
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int Id { get; set; }
-
-    [Required]
-    [MaxLength(50)]
-    public required string Name { get; set; }
+    public int Id { get; set;}
+    public string SupplierName { get; set;} = null!;
 }
